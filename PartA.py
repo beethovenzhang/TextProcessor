@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#!/usr/bin/env python3
 """
 Created on Thu Jan 17 20:25:49 2019
 
@@ -6,7 +7,7 @@ Created on Thu Jan 17 20:25:49 2019
 """
 
 # Part A of project 1 Text Processing.
-# Time complexity max(O(m), O(nlog(n))) where m is the total number of 
+# Time complexity O(max(m, nlog(n)) where m is the total number of 
 # characters in the file and n is the number of valid tokens
 
 import sys
@@ -15,22 +16,20 @@ import operator
 
 
 
-
-def get_text():
-    '''Get text from the file passed as a command line argument'''
-    file = open(sys.argv[1])
-    text = file.read()
-    file.close()
-    return text
-
-def tokenize_and_count(text):
-    '''Tokenize the text into words and count number of occurrences of each word'''
-    text = text.lower()
+def tokenize_and_count(n):
+    '''
+    Read the file given line by line. 
+    Tokenize the text into words and count number of occurrences of each word
+    '''
     counter = dict()
-    l1 = re.split('[^a-zA-Z0-9]',text)
-    for word in l1:
-        if word.isalnum():
-            counter[word] = counter.get(word, 0) + 1
+    with open(sys.argv[n]) as file:
+        for line in file:
+            text = line.lower()
+            l1 = re.split('[^a-zA-Z0-9]',text)
+            for word in l1:
+                if word.isalnum():
+                    counter[word] = counter.get(word, 0) + 1
+
     return counter
 
 def print_word_frequencies(counter):
@@ -44,6 +43,5 @@ def print_word_frequencies(counter):
     
 
 if __name__ == '__main__':
-    text = get_text()
-    counter = tokenize_and_count(text)
+    counter = tokenize_and_count(1)
     print_word_frequencies(counter)
