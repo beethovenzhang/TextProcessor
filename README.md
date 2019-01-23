@@ -31,4 +31,4 @@ If a trip is cancelled more than 5 minutes after the driver-partner has confirme
 ### Part B
 `python PartB.py test1.txt test2.txt`
 
-`test1.txt` and `test2.txt` can be any text file of your choice, just make sure it's in the same folder as PartA.py.
+`test1.txt` and `test2.txt` can be any text file of your choice, just make sure it's in the same folder as PartB.py. Also make sure ParA.py and PartB.py are in the same folder.
