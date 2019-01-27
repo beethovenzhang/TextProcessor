@@ -10,6 +10,26 @@ It implements the following functionality:
 4. Print out the word frequency counts onto the screen. The print out should be ordered by decreasing frequency. (so, highest frequency words first). Resolve ties alphabetically in ascending order.
 5. It reads the file line by line so it can handle large files.
 
+**Input:**
+Here’s a fun-fact! White tigers live mostly in “India”.
+Wild lions live mostly in “Africa”.
+
+**Output:**  
+in 2  
+live 2  
+mostly 2  
+a 1  
+africa 1  
+fact 1  
+fun 1  
+here 1  
+india 1  
+lions 1  
+s 1  
+tigers 1  
+white 1  
+wild 1  
+
 ## Part B
 A program that takes two text files as arguments and outputs the number of tokens they have in common. Here is an example:
 
@@ -19,7 +39,7 @@ We reviewed the trip and credited the cancellation fee. The driver has been noti
 **Input file 2:**
 If a trip is cancelled more than 5 minutes after the driver-partner has confirmed the request, a cancellation fee will apply.
 
-**Output**
+**Output: **
 6
 
 ## How to use

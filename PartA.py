@@ -19,7 +19,8 @@ import operator
 def tokenize_and_count(n):
     '''
     Read the file given line by line. 
-    Tokenize the text into words and count number of occurrences of each word
+    Tokenize the text into words and count number of occurrences of each word.
+    Time complexity: O(m) where m is the total number of characters in the given file.
     '''
     counter = dict()
     with open(sys.argv[n]) as file:
@@ -33,7 +34,10 @@ def tokenize_and_count(n):
     return counter
 
 def print_word_frequencies(counter):
-    '''Print out the word frequencies in given order'''
+    '''
+    Print out the word frequencies in given order.
+    Time complexity: O(n) where n is the number of tokens in the counter.
+    '''
     l2 = list(counter.items())
     l2.sort(key = operator.itemgetter(0))
     l2.sort(key = operator.itemgetter(1), reverse = True)
